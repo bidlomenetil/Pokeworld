@@ -1,0 +1,53 @@
+{
+  "name": "@poketinder/backend",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "author": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "dev": "nest start --watch",
+    "debug": "nest start --debug --watch",
+    "prod": "node dist/main",
+    "lint": "eslint . --fix",
+    "format": "prettier --write .",
+    "pretty": "yarn format && yarn lint",
+    "lint-inspector": "npx @eslint/config-inspector",
+    "database": "docker compose up --build",
+    "lint-staged": "lint-staged",
+    "generate-api": "orval --config ./orval.config.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/swagger": "^8.0.7",
+    "@nestjs/typeorm": "^10.0.2",
+    "@siberiacancode/fetches": "1.3.1",
+    "axios": "^1.7.8",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.0",
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.3.1",
+    "@types/supertest": "^6.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.ts": "eslint --fix"
+  }
+}
